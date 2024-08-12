@@ -17,13 +17,12 @@
 TARGET_TEGRA_VARIANT    ?= common
 
 TARGET_TEGRA_BT       ?= bcm
-TARGET_TEGRA_CEC      := aosp
 TARGET_TEGRA_KERNEL   ?= 4.9
 TARGET_TEGRA_KEYSTORE := software
-TARGET_TEGRA_LIGHT    ?= lineage
+TARGET_TEGRA_LIGHT    ?= aosp
 TARGET_TEGRA_MAN_LVL  := 5
 TARGET_TEGRA_MEMTRACK ?= rel-shield-r
-TARGET_TEGRA_THERMAL  ?= lineage
+TARGET_TEGRA_THERMAL  ?= aosp
 TARGET_TEGRA_WIDEVINE ?= rel-shield-r
 TARGET_TEGRA_WIFI     ?= bcm
 
@@ -98,21 +97,6 @@ PRODUCT_PACKAGES += \
     audio_effects.xml \
     audio_policy_configuration.xml \
     nvaudio_conf.xml
-
-# CEC
-PRODUCT_COPY_FILES := $(filter-out frameworks/native/data/etc/android.hardware.hdmi.cec.xml%android.hardware.hdmi.cec.xml,$(PRODUCT_COPY_FILES))
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.hdmi.cec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/staging/android.hardware.hdmi.cec.xml
-
-PRODUCT_PACKAGES += \
-    nx_cec.rc \
-    cec_disable.xml \
-    RC_for_stdp2550_cec
-
-# Device Settings
-PRODUCT_PACKAGES += \
-    DeviceSettingsNX
 
 # DocumentsUI
 # We are the exception, being an ATV device with touch
