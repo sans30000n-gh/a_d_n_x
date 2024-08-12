@@ -42,6 +42,11 @@ TARGET_OTA_ASSERT_DEVICE := nx,nx_tab
 # Bootloader versions
 TARGET_BOARD_INFO_FILE := device/nintendo/nx/board-info.txt
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+TARGET_DISABLE_EPPE := true
+
 # Manifest
 DEVICE_MANIFEST_FILE := device/nintendo/nx/manifest.xml
 
