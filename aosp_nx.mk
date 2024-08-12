@@ -13,8 +13,8 @@
 # limitations under the License.
 
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/config/common_full_tv.mk)
 
 # Inherit NX-specific LineageOS additions.
 include device/nintendo/nx/lineage.mk
@@ -28,7 +28,7 @@ $(call inherit-product, device/google/atv/products/atv_base.mk)
 # Inherit device configuration for nx.
 $(call inherit-product, device/nintendo/nx/device.mk)
 
-PRODUCT_NAME := lineage_nx
+PRODUCT_NAME := aosp_nx
 PRODUCT_DEVICE := nx
 PRODUCT_BRAND := Nintendo
 PRODUCT_MANUFACTURER := Nintendo
