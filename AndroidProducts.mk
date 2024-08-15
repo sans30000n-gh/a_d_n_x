@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_nx.mk
+    $(LOCAL_DIR)/aosp_nx.mk \
     $(LOCAL_DIR)/twrp_nx.mk
