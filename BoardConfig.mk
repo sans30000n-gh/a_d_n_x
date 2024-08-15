@@ -46,6 +46,12 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TARGET_DISABLE_EPPE := true
+WITH_TWRP := true
+
+# TWRP Support
+ifeq ($(WITH_TWRP),true)
+include device/nintendo/nx/twrp/twrp.mk
+endif
 
 # Manifest
 DEVICE_MANIFEST_FILE := device/nintendo/nx/manifest.xml
