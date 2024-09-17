@@ -43,7 +43,7 @@ PRODUCT_CHARACTERISTICS   := tablet
 PRODUCT_AAPT_PREF_CONFIG  := xhdpi
 endif
 
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
 
